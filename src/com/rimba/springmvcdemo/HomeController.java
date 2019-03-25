@@ -22,6 +22,11 @@ public class HomeController {
 		return "index";
 	}
 	
+	@RequestMapping("/home")
+	public String showMyHomePage() {
+		return "index";
+	}
+	
 	@RequestMapping(value = "/showForm", method = RequestMethod.GET)
     public ModelAndView showForm() {
         return new ModelAndView("helloworld-form", "casterHeroes", new CasterHeroes());
@@ -34,6 +39,7 @@ public class HomeController {
             return "error";
         }
         model.addAttribute("name", heroes.getName());
+        model.addAttribute("master",heroes.getMaster());
         model.addAttribute("type", heroes.getType());
         model.addAttribute("weapon", heroes.getWeapon());
         model.addAttribute("info", heroes.getHeroesInfo());

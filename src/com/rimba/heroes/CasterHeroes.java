@@ -14,6 +14,7 @@ public class CasterHeroes implements Heroes {
 	//@Value("Harpot")
 	private String name;
 	//@Value("Wizard")
+	private String master;
 	private String type;
 	private String weapon;
 	
@@ -50,6 +51,18 @@ public class CasterHeroes implements Heroes {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+
+
+	public String getMaster() {
+		return master;
+	}
+
+
+
+	public void setMaster(String master) {
+		this.master = master;
 	}
 
 
